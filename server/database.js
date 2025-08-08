@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+require("dotenv").config(); // Load environment variables
 
-const MONGODB_URI = "mongodb+srv://subhammaharana1307:Subham%401307@bookapi.rnbiotz.mongodb.net/?retryWrites=true&w=majority";
+const MONGODB_URI = process.env.MONGODB_URI;
 
 const databaseConnection = async () => {
   mongoose
@@ -14,3 +15,4 @@ const databaseConnection = async () => {
 };
 
 module.exports = databaseConnection;
+
